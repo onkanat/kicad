@@ -1,0 +1,44 @@
+# VAKIF — onkanat ortak marka dili (W8, 21.10.2026)
+# Görünüm: _layouts/default.html + assets/css/vakif.css (eğitim repolarında birebir aynı).
+title: "KiCad Çalışma Notları"
+brand: "KiCad"
+brand_suffix: "eğitim notları"
+eyebrow: "EĞİTİM · KICAD"
+description: "Türkçe KiCad eğitim notları ve örnekleri"
+lang: tr
+repository: onkanat/kicad
+
+# Rouge'ta Python lexer'ı var (FreeCAD/KiCad betikleri Python).
+highlight_js: true
+
+url: "https://onkanat.github.io"
+baseurl: "/kicad"
+
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    guess_lang: true
+
+plugins:
+  - jekyll-redirect-from
+  - jekyll-optional-front-matter
+  - jekyll-titles-from-headings
+  - jekyll-relative-links
+  - jekyll-sitemap
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .bundle
+  - _site
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+      lang: tr
